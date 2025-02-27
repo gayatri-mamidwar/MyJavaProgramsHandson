@@ -1,5 +1,6 @@
 package com.gayatri.StringProblems;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /* 3 diff way->
@@ -15,27 +16,19 @@ public class AnagramString {
         System.out.println("Enter 2 strings : ");
         String s1 = sc.next();
         String s2 = sc.next();
-        boolean ans = isAnagram(s1, s2);
+        int anagram = isAnagram(s1, s2);
+        boolean ans = anagram == 0 ? true : false;          //if same returns 0
         System.out.println(ans);
 
     }
 
-    private static boolean isAnagram(String s1, String s2) {
-        int n = s1.length();
-        int s1sum = 0, s2sum=0;
+    private static int isAnagram(String s1, String s2) {
+        char[] str1 = s1.toCharArray();
+        char[] str2 = s2.toCharArray();
 
-        if(s1.length() != s2.length()){
-            return false;
-        } else{
-            for (int i=0; i<n; i++){
-                s1sum += (int) s1.charAt(i);        //here type casting is not necessary bcz implicit casting is happening char->int
-                s2sum += (int) s2.charAt(i);
-            }
-            if(s1sum != s2sum){
-                return false;
-            }
-        }
-        return true;
+        Arrays.sort(str1);
+        Arrays.sort(str2);
+        return Arrays.compare(str1, str2);
     }
 }
 
@@ -45,4 +38,4 @@ public class AnagramString {
     Avoid->
         String s1 = new Scanner(System.in).next();
         String s2 = new Scanner(System.in).next();
-        */
+*/
