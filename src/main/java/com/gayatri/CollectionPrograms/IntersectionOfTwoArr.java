@@ -12,6 +12,22 @@ public class IntersectionOfTwoArr {
         System.out.println("arr1 : " + Arrays.toString(arr1));
         System.out.println("arr2 : " + Arrays.toString(arr2));
 
+        //Using retailAll()
+        HashSet<Integer> hs1 = new HashSet<>();
+        for(int ele : arr1){
+            hs1.add(ele);
+        }
+
+        HashSet<Integer> hs2 = new HashSet<>();
+        for(int ele : arr2){
+            hs2.add(ele);
+        }
+
+        hs1.retainAll(hs2);
+        System.out.println("Intersection arr = "+hs1);
+
+
+        /* Without using retainAll()
         HashSet<Integer> hs1 = new HashSet<>();
         for(int ele : arr1){
             hs1.add(ele);
@@ -23,7 +39,6 @@ public class IntersectionOfTwoArr {
                 intersectionSet.add(ele);
             }
         }
-        System.out.println("Intersection arr = "+intersectionSet);
-
+         */
     }
 }
