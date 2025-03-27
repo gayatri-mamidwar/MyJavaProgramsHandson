@@ -1,4 +1,4 @@
-package com.gayatri.CollectionPrograms;
+package com.gayatri.CollectionPrograms.JavaCollection;
 
 /* Find the Largest/Smallest Element in a List -
 Find the largest or smallest element in a list

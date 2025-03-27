@@ -1,4 +1,4 @@
-package com.gayatri.CollectionPrograms;
+package com.gayatri.CollectionPrograms.JavaCollection;
 
 import java.util.*;
 

@@ -7,3 +7,13 @@
 
 4.You need to count occurrences of elements in a list-
 	Collectors.groupingBy(Function.identity(), Collectors.counting())  [or U can use e->e instead of Function.identity()]
+
+5. Collectors.groupingBy() -> takes 1,2 param depends on question
+6. Collectors.toMap(k,v) -> takes 2 param
+7. Return type of Collectors counting() is Long
+
+/* For counting elements in groups → Use groupingBy(e -> key, Collectors.counting()).
+   For simple key-value mappings with unique keys → Use toMap().
+   Don’t use Collectors.counting() inside toMap() – it doesn’t work there.
+   ex- collect(Collectors.toMap(e->e.deptName, Collectors.counting())               ...WRONG cant use count with tomap
+*/

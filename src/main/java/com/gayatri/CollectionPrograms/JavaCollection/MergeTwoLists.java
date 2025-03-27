@@ -1,4 +1,4 @@
-package com.gayatri.CollectionPrograms;
+package com.gayatri.CollectionPrograms.JavaCollection;
 
 /* Merge Two Lists -
 Merge two lists (e.g., ArrayLists) while removing duplicates or sorting them.
