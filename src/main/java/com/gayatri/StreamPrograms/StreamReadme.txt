@@ -17,3 +17,7 @@
    Don’t use Collectors.counting() inside toMap() – it doesn’t work there.
    ex- collect(Collectors.toMap(e->e.deptName, Collectors.counting())               ...WRONG cant use count with tomap
 */
+
+8.Collectors.summingInt/Double() based on d.t of which attri sum we r taking            ...FOR SUM => summing()
+9.Collectors.averagingInt/Double() based on d.t of which attri avg we r taking          ...FOR AVG => averaging()
+10. Collectors.comparingDoublr/Int() based ....                                         ...FOR compare => comparing()
